@@ -1,0 +1,10 @@
+<div class="common_case hao_case common_hide" id="hao_case">
+<div class="hao_news_mm"><div id="hao_news_mm"><p>正在获取热门资讯...</p></div></div>
+</div>
+<script src="/themes/sprite/hao.js"></script>
+<script>
+$('#hao_case').ready(function(e) {	
+    hao.site('hao_case','hao_suggest','suggest');
+	hao.suggestNews('hao_news_mm',6000);
+});
+</script>

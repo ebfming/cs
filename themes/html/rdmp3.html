@@ -1,0 +1,70 @@
+<script src="<?php echo ebf_website; ?>themes/sprite/player_code.js"></script>
+
+<form action="#">
+  <div class="common_hide" id="player_test"></div>
+  <table width="600" border="0" cellspacing="0" cellpadding="0" class="common_front player_case">
+    
+      <td></td>
+    <tr>
+      <td colspan="3" class="common_front player_t">请在这里完成你要分享的音乐</td>
+    </tr>
+    <tr>
+      <td width="103">音乐地址</td>
+      <td width="337" class="common_front player_value"><label>
+          <input type="text" name="textfield" id="play_source" />
+        </label></td>
+      <td width="160" class="player_caption">必须是mp3文件（必填）</td>
+    </tr>
+    <tr>
+      <td>音乐自动播放</td>
+      <td class="common_front player_value"><input type="text" name="textfield2" id="play_author" /></td>
+      <td class="player_caption">默认播放，'yes'为停止</td>
+    </tr>
+    <tr>
+      <td>是否循环播放</td>
+      <td class="common_front player_value"><input type="text" name="textfield3" id="play_copyright" /></td>
+      <td class="player_caption">默认循环播,'no'播放一次</td>
+    </tr>
+    <tr>
+      <td><input name="play_save_code" type="hidden" id="play_save_code" value="" /></td>
+      <td><table width="200" border="0" align="right" cellpadding="0" cellspacing="0" class="player_con common_button">
+          <tr>
+            <td width="118"></td>
+            <td width="82"><label>
+                <input type="button" name="button" id="button" value="试听一下" onclick="mp3_try_play();" />
+              </label></td>
+          </tr>
+        </table></td>
+      <td></td>
+    </tr>
+  </table>
+</form>
+<form>
+<table width="600" border="0" cellspacing="0" cellpadding="0" class="common_front player_case">
+  <tr>
+    <td class="common_front player_t">URL代码（可直接听音乐，或插入博客论坛里）</td>
+  </tr>
+  <tr>
+    <td class="common_front player_textarea"><label>
+        <textarea name="textarea" cols="45" rows="5" id="get_code_url"></textarea>
+      </label></td>
+  </tr>
+  <tr>
+    <td class="player_con common_button"><input type="button" name="button3" id="button3" value="复制代码" onclick="mp3_copy_ercode('url','get_code_url');" />
+      <input type="button" name="button" id="button" value="生成代码" onclick="mp3_call_code('url','get_code_url');" /></td>
+  </tr>
+</table>
+<table width="600" border="0" cellspacing="0" cellpadding="0" class="common_front player_case">
+  <tr>
+    <td class="common_front player_t">&lt;object&gt;标签代码,用于嵌入在完整的HTML页面里</td>
+  </tr>
+  <tr>
+    <td class="common_front player_textarea"><label>
+        <textarea name="textarea2" id="get_code_obj" cols="45" rows="5" ></textarea>
+      </label></td>
+  </tr>
+  <tr>
+    <td class="player_con common_button"><input type="button" name="button4" id="button4" value="复制代码" onclick="mp3_copy_ercode('obj','get_code_obj');" />
+      <input type="button" name="button" id="button" value="生成代码" onclick="mp3_call_code('obj','get_code_obj');" /></td>
+  </tr>
+</table>

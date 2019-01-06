@@ -1,0 +1,47 @@
+<form onSubmit="return false;">
+    <div class="child_case query_ip_case">
+        <dl>
+            <dd class="query_ip_search" id="query_ip_search">
+                <input name="q" type="text"  />
+            </dd>
+            <input name="dis" type="hidden" />
+            <dd class="common_front query_ip_conn common_button" id="query_ip_sub">
+                <input name="search_con" type="button" value="查询"/>
+            </dd>
+            <dd class="clear_debug"></dd>
+        </dl>
+        <div class="clear_24"></div>
+        <div class="common_front query_ip_res">
+            <p id="query_ip_res"></p>
+            <p>您好来自<script src="<?php echo ebf_website ?>/php-bin/ip.php?type=js_city"></script>的朋友</p>
+        </div>
+        <div class="clear_24"></div>
+    </div>
+</form>
+<script src="<?php echo ebf_website ?>themes/sprite/ip.js"></script> 
+<script>
+/**
+初始化表单
+*/
+$('#query_ip_search').ready(function(){
+	var _dlz_plus=new dlz_plus();
+	_dlz_plus.setSuggest('query_ip_search','请输入您要查询的IP或网址如：ebf.cc');
+})
+/**
+手动查询数据
+*/
+$('#query_ip_sub').find('input').click(function(){
+	queryIP();
+})
+$(function(){
+	dlz_utils.Enter_Ctrl('',13,'queryIP()');
+})
+/**
+通过参数查询
+*/
+var q=getRequest('q');
+if($.trim(q)!==''){
+	$('#query_ip_search').find('input').val(q);
+	queryIP();
+}
+</script>

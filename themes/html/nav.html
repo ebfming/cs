@@ -1,0 +1,20 @@
+<nav class="header_guide" id="header_guide">
+  <a class="header_guide_first" href="<?php echo ebf_website.cgi_program.ebf_root ?>?dis=hao" content="hao">魔镜网址导航</a>
+  <a href="<?php echo ebf_website.cgi_program.ebf_root ?>?dis=weather" content="weather">城市天气</a>
+  <a href="<?php echo ebf_website.cgi_program.ebf_root ?>?dis=ip" content="ip">查询IP</a>
+  <a href="<?php echo ebf_website.cgi_program.ebf_root ?>?dis=flv" content="flv">FLV视频播放器</a>
+  <a href="<?php echo ebf_website.cgi_program.ebf_root ?>?dis=mp3" content="mp3">MP3音乐播放器</a>
+  <a href="<?php echo ebf_website?>daluzai/js.shtml" content="daluzai-js">大陆仔JS</a>
+  <a href="<?php echo ebf_website?>daluzai/plus!.shtml" content="daluzai-plus">大陆仔 plus!</a>
+  <a href="<?php echo ebf_website?>daluzai/ipush.shtml" content="daluzai-ipush">大陆仔 iPush</a>
+  <div class="clear_debug"></div>
+</nav>
+<script>
+/**
+导航菜单UI效果
+*/
+$('#header_guide').ready(function(){
+	var _dlz_plus=new dlz_plus();
+	_dlz_plus.guideCurrent('header_guide','header_guide_current');
+})
+</script>
